@@ -3,75 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Band Concerts</title>
-    <link rel="stylesheet" href="style.css">
+    <title>밴드 콘서트 모음</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 3rem;
+            color: #222;
+        }
+
+        .concert-item {
+            background-color: #fff;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .concert-item img {
+            width: 300px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .concert-info {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .concert-info h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0 0 1rem 0;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .info-table td {
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .info-table td:first-child {
+            font-weight: 500;
+            width: 100px;
+            color: #555;
+        }
+
+        .ticket-button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 1.5rem;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .ticket-button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Band Concerts</h1>
-    </header>
 
-    <main>
-        <div class="concert-grid">
-            <div class="concert-item">
-                <img src="images/oasis.jpg" alt="Oasis Concert Poster">
-                <div class="concert-info">
-                    <h2>Oasis Live '25</h2>
-                    <p><strong>날짜:</strong> 2025년 10월 21일</p>
-                    <p><strong>장소:</strong> 고양종합운동장</p>
-                    <p><strong>예매 오픈:</strong> 2024년 11월 29일</p>
-                </div>
-            </div>
-            <div class="concert-item">
-                <img src="images/coldplay.jpg" alt="Coldplay Concert Poster">
-                <div class="concert-info">
-                    <h2>Coldplay: Music of the Spheres</h2>
-                    <p><strong>날짜:</strong> 2025년 4월 16일 - 25일</p>
-                    <p><strong>장소:</strong> 고양종합운동장</p>
-                    <p><strong>예매 오픈:</strong> 완료</p>
-                </div>
-            </div>
-            <div class="concert-item">
-                <img src="images/cigarettes_after_sex.jpg" alt="Cigarettes After Sex Concert Poster">
-                <div class="concert-info">
-                    <h2>Cigarettes After Sex: X's World Tour</h2>
-                    <p><strong>날짜:</strong> 2025년 1월 7일</p>
-                    <p><strong>장소:</strong> 킨텍스</p>
-                    <p><strong>예매 오픈:</strong> 2024년 10월 11일</p>
-                </div>
-            </div>
-            <div class="concert-item">
-                <img src="images/jannabi.jpg" alt="Jannabi Concert Poster">
-                <div class="concert-info">
-                    <h2>잔나비 앵콜 콘서트 '모든소년소녀들'</h2>
-                    <p><strong>날짜:</strong> 2025년 8월 2일 - 3일</p>
-                    <p><strong>장소:</strong> 서울 올림픽체조경기장</p>
-                    <p><strong>예매 오픈:</strong> 2025년 7월 11일</p>
-                </div>
-            </div>
-             <div class="concert-item">
-                <img src="images/sesoneon.jpg" alt="새소년 Concert Poster">
-                <div class="concert-info">
-                    <h2>새소년 'NOW' WORLD TOUR</h2>
-                    <p><strong>날짜:</strong> 2025년 (상세일정 추후 공개)</p>
-                    <p><strong>장소:</strong> 미정</p>
-                    <p><strong>예매 오픈:</strong> 미정</p>
-                </div>
-            </div>
-             <div class="concert-item">
-                <img src="images/thornapple.jpg" alt="쏜애플 Concert Poster">
-                <div class="concert-info">
-                    <h2>쏜애플 콘서트 (가제)</h2>
-                    <p><strong>날짜:</strong> 2025년 (상세일정 추후 공개)</p>
-                    <p><strong>장소:</strong> 미정</p>
-                    <p><strong>예매 오픈:</strong> 미정</p>
-                </div>
+    <div class="container">
+        <h1>밴드 콘서트 모음</h1>
+
+        <!-- 실리카겔 콘서트 -->
+        <div class="concert-item">
+            <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_8314902%2F83149024009.jpg&type=sc960_832" alt="실리카겔 콘서트 포스터">
+            <div class="concert-info">
+                <h2>실리카겔 단독 콘서트 'Syn.THE.Size X'</h2>
+                <table class="info-table">
+                    <tr>
+                        <td>공연 일시</td>
+                        <td>2025년 8월 30일(토) - 31일(일)</td>
+                    </tr>
+                    <tr>
+                        <td>공연 장소</td>
+                        <td>킨텍스 제1전시장 1홀</td>
+                    </tr>
+                    <tr>
+                        <td>티켓 오픈</td>
+                        <td>추후 공지 예정</td>
+                    </tr>
+                </table>
+                <a href="#" class="ticket-button">예매 사이트 (추후 공개)</a>
             </div>
         </div>
-    </main>
+
+        <!-- 잔나비 콘서트 -->
+        <div class="concert-item">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAyMDZfMTgy%2FMDAxNjc1NjY0MDU4MTI1.139nTbXkQkP0xW-Pj_n-n2e4iL2eDqfO-QeGk22dGHIg.C-q0r2pGto-lYjKq3I_fM-i-k0_aI_z_t0-j1j0q0hIg.JPEG.jannabi_0516%2F%25C0%25E2%25B3%25AA%25BA%25F1_%25B0%25F8%25BF%25AC%25C8%25B8_%25C6%25F7%25BD%25BA%25C5%25CD.jpg&type=sc960_832" alt="잔나비 콘서트 포스터">
+            <div class="concert-info">
+                <h2>잔나비 앵콜 콘서트 '모든소년소녀들 2125'</h2>
+                <table class="info-table">
+                    <tr>
+                        <td>공연 일시</td>
+                        <td>2025년 8월 2일(토) - 3일(일) 오후 5시</td>
+                    </tr>
+                    <tr>
+                        <td>공연 장소</td>
+                        <td>서울 올림픽체조경기장 (KSPO DOME)</td>
+                    </tr>
+                    <tr>
+                        <td>일반 예매</td>
+                        <td>2025년 7월 11일(금) 오후 8시</td>
+                    </tr>
+                </table>
+                <a href="http://www.ticketlink.co.kr/" class="ticket-button" target="_blank">티켓링크 바로가기</a>
+            </div>
+        </div>
+        
+        <!-- 루시 콘서트 -->
+        <div class="concert-item">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAzMjZfMTE5%2FMDAxNzExNDE0OTc1Mzkw.L9U9V4t-0k9x8Z1r0b0z0w1Q1V0a9y0Z0a0b0b0Z0z8g.0Z0z0t0b0c-d0Q1W-U9U9U4z0w1Q0t0b.JPEG.dbfladk23/IMG_3489.JPG&type=sc960_832" alt="루시 콘서트 포스터">
+            <div class="concert-info">
+                <h2>LUCY 8TH CONCERT 'LUCID LINE'</h2>
+                <table class="info-table">
+                    <tr>
+                        <td>공연 일시</td>
+                        <td>2025년 11월 7일(금) - 9일(일)</td>
+                    </tr>
+                    <tr>
+                        <td>공연 장소</td>
+                        <td>올림픽공원 티켓링크 라이브 아레나</td>
+                    </tr>
+                    <tr>
+                        <td>일반 예매</td>
+                        <td>2025년 10월 24일(금) 오후 8시</td>
+                    </tr>
+                </table>
+                <a href="https://www.nolticket.com/" class="ticket-button" target="_blank">NOL 티켓 바로가기</a>
+            </div>
+        </div>
+
+    </div>
 
     <footer>
         <p>&copy; 2025 Band Concerts. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
