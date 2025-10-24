@@ -38,6 +38,12 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
             overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .concert-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
         }
 
         .concert-item img {
@@ -92,6 +98,12 @@
         .ticket-button:hover {
             background-color: #555;
         }
+        
+        .note {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 1rem;
+        }
 
         footer {
             text-align: center;
@@ -104,74 +116,98 @@
 <body>
 
     <div class="container">
-        <h1>밴드 콘서트 모음</h1>
+        <h1>Band Concerts</h1>
 
         <!-- 실리카겔 콘서트 -->
         <div class="concert-item">
-            <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fshopping-phinf.pstatic.net%2Fmain_8314902%2F83149024009.jpg&type=sc960_832" alt="실리카겔 콘서트 포스터">
+            <img src="https://ticketimage.interpark.com/Play/image/large/24/24008130_p.gif" alt="실리카겔 콘서트 포스터">
             <div class="concert-info">
-                <h2>실리카겔 단독 콘서트 'Syn.THE.Size X'</h2>
+                <h2>실리카겔 단독 콘서트 'Syn.THE.Size II'</h2>
                 <table class="info-table">
                     <tr>
                         <td>공연 일시</td>
-                        <td>2025년 8월 30일(토) - 31일(일)</td>
+                        <td>2025년 5월 17일(토) - 19일(월)</td>
                     </tr>
                     <tr>
                         <td>공연 장소</td>
-                        <td>킨텍스 제1전시장 1홀</td>
+                        <td>장충체육관</td>
                     </tr>
                     <tr>
                         <td>티켓 오픈</td>
-                        <td>추후 공지 예정</td>
+                        <td>2025년 4월 2일(화) 오후 8시</td>
                     </tr>
                 </table>
-                <a href="#" class="ticket-button">예매 사이트 (추후 공개)</a>
+                <a href="https://tickets.interpark.com/" class="ticket-button" target="_blank">인터파크 티켓</a>
             </div>
         </div>
 
         <!-- 잔나비 콘서트 -->
         <div class="concert-item">
-            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAyMDZfMTgy%2FMDAxNjc1NjY0MDU4MTI1.139nTbXkQkP0xW-Pj_n-n2e4iL2eDqfO-QeGk22dGHIg.C-q0r2pGto-lYjKq3I_fM-i-k0_aI_z_t0-j1j0q0hIg.JPEG.jannabi_0516%2F%25C0%25E2%25B3%25AA%25BA%25F1_%25B0%25F8%25BF%25AC%25C8%25B8_%25C6%25F7%25BD%25BA%25C5%25CD.jpg&type=sc960_832" alt="잔나비 콘서트 포스터">
+            <img src="https://ticketimage.interpark.com/Play/image/large/24/24001948_p.gif" alt="잔나비 콘서트 포스터">
             <div class="concert-info">
-                <h2>잔나비 앵콜 콘서트 '모든소년소녀들 2125'</h2>
+                <h2>잔나비 전국투어 'JANNABI'S SMALL PIECES 21'</h2>
                 <table class="info-table">
                     <tr>
                         <td>공연 일시</td>
-                        <td>2025년 8월 2일(토) - 3일(일) 오후 5시</td>
+                        <td>2025년 2월 24일(토) - 7월 28일(일)</td>
                     </tr>
                     <tr>
                         <td>공연 장소</td>
-                        <td>서울 올림픽체조경기장 (KSPO DOME)</td>
+                        <td>전국 각지 (서울, 부산, 대구 등)</td>
                     </tr>
                     <tr>
                         <td>일반 예매</td>
-                        <td>2025년 7월 11일(금) 오후 8시</td>
+                        <td>각 도시별 상이 (오픈 완료)</td>
                     </tr>
                 </table>
-                <a href="http://www.ticketlink.co.kr/" class="ticket-button" target="_blank">티켓링크 바로가기</a>
+                <a href="https://tickets.interpark.com/" class="ticket-button" target="_blank">인터파크 티켓</a>
             </div>
         </div>
         
         <!-- 루시 콘서트 -->
         <div class="concert-item">
-            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAzMjZfMTE5%2FMDAxNzExNDE0OTc1Mzkw.L9U9V4t-0k9x8Z1r0b0z0w1Q1V0a9y0Z0a0b0b0Z0z8g.0Z0z0t0b0c-d0Q1W-U9U9U4z0w1Q0t0b.JPEG.dbfladk23/IMG_3489.JPG&type=sc960_832" alt="루시 콘서트 포스터">
+            <img src="https://ticketimage.interpark.com/Play/image/large/24/24004921_p.gif" alt="루시 콘서트 포스터">
             <div class="concert-info">
-                <h2>LUCY 8TH CONCERT 'LUCID LINE'</h2>
+                <h2>LUCY 다섯 번째 단독 콘서트 'LOVE, FIVE'</h2>
                 <table class="info-table">
                     <tr>
                         <td>공연 일시</td>
-                        <td>2025년 11월 7일(금) - 9일(일)</td>
+                        <td>2025년 4월 20일(토) - 21일(일)</td>
                     </tr>
                     <tr>
                         <td>공연 장소</td>
-                        <td>올림픽공원 티켓링크 라이브 아레나</td>
+                        <td>SK올림픽핸드볼경기장</td>
                     </tr>
                     <tr>
                         <td>일반 예매</td>
-                        <td>2025년 10월 24일(금) 오후 8시</td>
+                        <td>2025년 3월 29일(금) 오후 8시</td>
                     </tr>
                 </table>
-                <a href="https://www.nolticket.com/" class="ticket-button" target="_blank">NOL 티켓 바로가기</a>
+                <a href="https://tickets.interpark.com/" class="ticket-button" target="_blank">인터파크 티켓</a>
+            </div>
+        </div>
+
+        <!-- 오아시스 콘서트 (기념) -->
+        <div class="concert-item">
+            <img src="https://i.ebayimg.com/images/g/sE0AAOSw2c1jk-4x/s-l1200.webp" alt="오아시스 넵워스 공연 포스터">
+            <div class="concert-info">
+                <h2>Oasis Live at Knebworth (Tribute)</h2>
+                <table class="info-table">
+                    <tr>
+                        <td>공연 일시</td>
+                        <td>1996년 8월 10일(토) - 11일(일)</td>
+                    </tr>
+                    <tr>
+                        <td>공연 장소</td>
+                        <td>Knebworth Park, UK</td>
+                    </tr>
+                    <tr>
+                        <td>티켓 오픈</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+                <a href="https://www.youtube.com/watch?v=kY3PcFk2A2k" class="ticket-button" target="_blank">공연 영상 보기</a>
+                <p class="note">* 전설적인 밴드 오아시스를 기념하는 페이지입니다.</p>
             </div>
         </div>
 
